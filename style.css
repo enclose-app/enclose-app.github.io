@@ -1,0 +1,88 @@
+/* Shared look for the long-form pages. The landing page keeps its own bare
+   monospace styling; these echo it in the header and then switch to a reading
+   face, because a page of terms set entirely in monospace doesn't get read. */
+
+:root {
+    color-scheme: light dark;
+    --ink: #1d1721;
+    --muted: #574a5e;
+    --rule: #ddcee4;
+    --bg: #ffffff;
+    --brand: #7b1fa2;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --ink: #ece0f0;
+        --muted: #b6a8bd;
+        --rule: #3a3040;
+        --bg: #16121a;
+        --brand: #c286dc;
+    }
+}
+
+body {
+    margin: 0 auto;
+    padding: 32px 20px 72px;
+    max-width: 44rem;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+header {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 16px;
+    margin-bottom: 28px;
+}
+
+header a { color: var(--brand); }
+
+h1 { font-size: 1.6rem; line-height: 1.25; margin: 0 0 4px; }
+h2 { font-size: 1.15rem; margin: 34px 0 8px; }
+h3 { font-size: 1rem; margin: 22px 0 6px; }
+
+.updated {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin: 0;
+}
+
+.lede {
+    border-left: 3px solid var(--brand);
+    padding: 2px 0 2px 16px;
+    margin: 24px 0;
+}
+
+a { color: var(--brand); }
+ul { padding-left: 22px; }
+li { margin: 6px 0; }
+code { font-size: 0.9em; }
+
+/* Wide content has to scroll inside its own box rather than the page. */
+.table-wrap { overflow-x: auto; margin: 14px 0; }
+
+table { border-collapse: collapse; width: 100%; font-size: 0.92rem; }
+th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-weight: 600; }
+
+footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.fixme {
+    background: rgba(255, 193, 7, 0.22);
+    border: 1px dashed #b06a16;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+}

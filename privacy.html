@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Enclose — Privacy Policy</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <a href="index.html">enclose</a> — privacy policy
+</header>
+
+<h1>Privacy Policy</h1>
+<p class="updated">Effective 31 July 2026 · last updated 31 July 2026</p>
+
+<div class="lede">
+    <p><strong>Enclose has no accounts, no servers and no analytics.</strong> Your walks,
+    your claimed territories and your saved home position are stored only on your
+    phone. Nothing about where you have walked is sent to us, because there is
+    nowhere to send it — the app has no backend.</p>
+</div>
+
+<p>This policy explains what the Enclose Android app does with data on your device,
+what small amount of information necessarily leaves it in order to draw a map, and
+what your choices are. It applies to the Enclose app distributed through Google
+Play.</p>
+
+<h2>1. Who is responsible</h2>
+<p>Enclose is an independent app published by its developer, contactable at
+<strong>encloseapp [at] gmail.com</strong>. For questions about this policy or about
+data in the app, that address is the fastest route to a person.</p>
+
+<h2>2. What the app stores on your device</h2>
+<p>All of the following is written to private app storage on your phone. Other apps
+cannot read it, and it is never uploaded:</p>
+<ul>
+    <li><strong>Walk routes</strong> — the sequence of GPS positions recorded while a
+        walk is running, along with distance, duration, elevation gain and the time
+        the walk started and finished.</li>
+    <li><strong>Claimed territories</strong> — the shape you walked, its area, the
+        name and colour you gave it, any notes you add, and the city name looked up
+        for it.</li>
+    <li><strong>A walk in progress</strong> — saved continuously as you walk, so an
+        interrupted walk can be resumed rather than lost if the system stops the
+        app.</li>
+    <li><strong>A local profile</strong> — a randomly generated display name (for
+        example "Quiet Fox"), which you can change. It is not an account and is not
+        registered anywhere.</li>
+    <li><strong>Preferences</strong> — your chosen map style, list ordering, the map
+        camera position, and the home position you optionally save.</li>
+    <li><strong>Cached map tiles</strong> — pieces of the map downloaded so the app
+        works without a signal.</li>
+</ul>
+
+<h2>3. Location</h2>
+<p>Enclose is a walking app, so location is the point of it. Specifics:</p>
+<ul>
+    <li>Location is accessed <strong>only while a walk is running</strong>. Starting a
+        walk shows a permanent notification for as long as recording continues, so
+        it is never recording without saying so. Stopping the walk stops it.</li>
+    <li>Recording continues with the screen off or the app in the background — that
+        is what the notification and the foreground-service permission are for —
+        but the app does <strong>not</strong> request the Android "allow all the
+        time" background location permission and cannot track you when no walk is
+        in progress.</li>
+    <li>Your positions are written to the local database described above. They are
+        not transmitted to the developer or to any advertising or analytics
+        service.</li>
+</ul>
+
+<h2>4. Other permissions, and why</h2>
+<div class="table-wrap">
+<table>
+    <tr><th>Permission</th><th>Why</th></tr>
+    <tr>
+        <td>Precise / approximate location</td>
+        <td>Tracing the route you walk, and deciding when your loop has closed.</td>
+    </tr>
+    <tr>
+        <td>Physical activity (optional)</td>
+        <td>Telling walking, running and cycling apart from driving, so a car trip
+            cannot claim territory. Processed on the device by Google Play services.
+            Declining it leaves the app fully usable; only the speed-based checks
+            apply.</td>
+    </tr>
+    <tr>
+        <td>Notifications</td>
+        <td>Showing the "recording your walk" notification required while tracking.</td>
+    </tr>
+    <tr>
+        <td>Foreground service (location)</td>
+        <td>Keeping the recording alive with the screen off, which is how a walk of
+            any length is recorded at all.</td>
+    </tr>
+    <tr>
+        <td>Internet / network state</td>
+        <td>Downloading map tiles, and only downloading offline maps on an unmetered
+            connection.</td>
+    </tr>
+    <tr>
+        <td>Vibrate</td>
+        <td>A buzz when your loop becomes closable, so you needn't watch the screen.</td>
+    </tr>
+</table>
+</div>
+
+<h2>5. What does leave your device</h2>
+<p>The app is offline-first, but a map has to come from somewhere. These are the only
+cases where anything goes out, and none of them involves sending us your data:</p>
+<ul>
+    <li><strong>Map tiles.</strong> Map imagery is requested from
+        <a href="https://openfreemap.org" rel="noopener">OpenFreeMap</a>, which serves
+        <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a>
+        data. Like any web request, this reveals your IP address and which parts of
+        the map you are looking at to that provider. It does not include your
+        recorded route, your territories or any identifier from the app.</li>
+    <li><strong>City names.</strong> To label a claim with the place it was walked,
+        the app asks Android's built-in geocoder to turn one coordinate into a place
+        name. On most devices that service is provided by Google as part of the
+        operating system, and the request is handled by the OS rather than by
+        Enclose. If it fails or you are offline, the claim simply has no city name
+        and nothing is lost.</li>
+    <li><strong>Files you choose to share.</strong> Exporting a territory as GPX or
+        GeoJSON, and sending it somewhere, happens only when you tap share and pick
+        the destination yourself.</li>
+</ul>
+
+<h2>6. What the app does not do</h2>
+<ul>
+    <li>No user accounts and no sign-in.</li>
+    <li>No advertising, and no advertising identifiers.</li>
+    <li>No analytics, crash-reporting or telemetry SDKs of any kind.</li>
+    <li>No selling or sharing of personal data. There is no data flow that would
+        make it possible.</li>
+    <li>No tracking of you across other apps or websites.</li>
+</ul>
+
+<h2>7. Keeping and deleting your data</h2>
+<p>Your data stays on your device until you remove it. You are in control of all of
+it:</p>
+<ul>
+    <li>Delete an individual territory from the app; deletions offer an undo, and are
+        permanent once that passes.</li>
+    <li>Clear everything at once from Android's Settings → Apps → Enclose → Storage →
+        Clear storage.</li>
+    <li>Uninstalling the app removes the database and all preferences with it.</li>
+</ul>
+<p>Because none of it reaches us, there is nothing for us to delete on your behalf and
+no copy to retrieve if you delete it — including if your phone is lost. If you have
+turned on Android's own device backup, your phone's backup may include app data;
+that is handled by Android and your Google account, not by Enclose.</p>
+
+<h2>8. Children</h2>
+<p>Enclose is not directed at children and is not designed for use by children under
+13. It collects no information from anyone, children included, but the app involves
+walking outdoors and is intended for a general adult audience.</p>
+
+<h2>9. Your rights</h2>
+<p>Privacy laws such as the GDPR give you rights to access, correct, export and erase
+personal data held about you. In this app those rights are satisfied directly and
+immediately: the data is on your device, you can read it in the app, export it as
+GPX or GeoJSON, and delete it at any time. We hold no copy to disclose, correct or
+erase. If you believe otherwise, or want to ask, write to the address below.</p>
+
+<h2>10. Security</h2>
+<p>App data is stored in Android's private per-app storage, which other apps cannot
+read. The security of the device itself — your screen lock, whether the device is
+rooted, and any backups you have enabled — is outside the app's control.</p>
+
+<h2>11. Changes to this policy</h2>
+<p>If the app ever gains a feature that changes any of this — an account, a sync
+server, anything that sends a route off the device — this policy will be updated
+before that feature ships, and the effective date at the top will change. Material
+changes will also be described in the app's release notes on Google Play.</p>
+
+<h2>12. Contact</h2>
+<p>Questions, corrections or privacy requests: <strong>encloseapp [at] gmail.com</strong>.</p>
+
+<footer>
+    <a href="index.html">home</a> · <a href="terms.html">terms of use</a> ·
+    map data © OpenStreetMap contributors
+</footer>
+
+</body>
+</html>

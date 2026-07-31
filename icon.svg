@@ -1,0 +1,30 @@
+<!--
+  The Enclose mark: a walked loop enclosing the ground it claims, with the
+  start/finish node on the top vertex. Same geometry as the Android launcher
+  icon (app/src/main/res/drawable/ic_launcher_*.xml), scaled up because a
+  favicon has no adaptive-icon mask to keep art clear of.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="brand" x1="0" y1="0" x2="256" y2="256" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9C3BC0"/>
+      <stop offset="0.5" stop-color="#7B1FA2"/>
+      <stop offset="1" stop-color="#4A148C"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="256" height="256" rx="48" fill="url(#brand)"/>
+
+  <!-- Source art is in the launcher's 108x108 space, centred on (54,54). -->
+  <g transform="translate(128,128) scale(3.05) translate(-54,-54)">
+    <!-- Claimed interior. -->
+    <path d="M54,31 L80,46 L72,77 L39,79 L28,51 Z" fill="#FFFFFF" fill-opacity="0.22"/>
+    <!-- Loop boundary. -->
+    <path d="M54,31 L80,46 L72,77 L39,79 L28,51 Z"
+          fill="none" stroke="#FFFFFF" stroke-width="6"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Start/finish node: white ring, brand-purple centre. -->
+    <circle cx="54" cy="31" r="7" fill="#FFFFFF"/>
+    <circle cx="54" cy="31" r="3.4" fill="#7B1FA2"/>
+  </g>
+</svg>
