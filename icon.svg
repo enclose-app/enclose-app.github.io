@@ -1,30 +1,43 @@
-<!--
-  The Enclose mark: a walked loop enclosing the ground it claims, with the
-  start/finish node on the top vertex. Same geometry as the Android launcher
-  icon (app/src/main/res/drawable/ic_launcher_*.xml), scaled up because a
-  favicon has no adaptive-icon mask to keep art clear of.
--->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- The Enclose mark: a walked loop around claimed ground. The start (solid,
+       lower left) is where the walk began; the walker (open ring) has come
+       round to within closing distance of it, so the loop is ready to close.
+       Copied from enclose-app/play/icon.svg, which is the source of truth;
+       favicon.ico and apple-touch-icon.png are rendered from this file. -->
   <defs>
-    <linearGradient id="brand" x1="0" y1="0" x2="256" y2="256" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#9C3BC0"/>
-      <stop offset="0.5" stop-color="#7B1FA2"/>
-      <stop offset="1" stop-color="#4A148C"/>
+    <linearGradient id="mark" gradientUnits="userSpaceOnUse" x1="8" y1="41" x2="40" y2="9">
+      <stop offset="0%" stop-color="hsl(258 90% 62%)" />
+      <stop offset="35%" stop-color="hsl(274 92% 64%)" />
+      <stop offset="70%" stop-color="hsl(290 92% 66%)" />
+      <stop offset="100%" stop-color="hsl(306 96% 72%)" />
+    </linearGradient>
+    <linearGradient id="body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="hsl(266 32% 13%)" />
+      <stop offset="50%" stop-color="hsl(276 34% 9%)" />
+      <stop offset="100%" stop-color="hsl(290 38% 8%)" />
+    </linearGradient>
+    <radialGradient id="bloom" cx="56%" cy="36%" r="60%">
+      <stop offset="0%" stop-color="hsl(290 92% 66%)" stop-opacity="0.36" />
+      <stop offset="100%" stop-color="hsl(290 92% 66%)" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="edge" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="hsl(258 90% 62%)" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="hsl(306 96% 72%)" stop-opacity="0.55" />
     </linearGradient>
   </defs>
 
-  <rect width="256" height="256" rx="48" fill="url(#brand)"/>
+  <rect x="1" y="1" width="46" height="46" rx="12" fill="url(#body)" />
+  <rect x="1" y="1" width="46" height="46" rx="12" fill="url(#bloom)" />
+  <rect x="1" y="1" width="46" height="46" rx="12" fill="none" stroke="url(#edge)" stroke-width="1.8" />
 
-  <!-- Source art is in the launcher's 108x108 space, centred on (54,54). -->
-  <g transform="translate(128,128) scale(3.05) translate(-54,-54)">
-    <!-- Claimed interior. -->
-    <path d="M54,31 L80,46 L72,77 L39,79 L28,51 Z" fill="#FFFFFF" fill-opacity="0.22"/>
-    <!-- Loop boundary. -->
-    <path d="M54,31 L80,46 L72,77 L39,79 L28,51 Z"
-          fill="none" stroke="#FFFFFF" stroke-width="6"
-          stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- Start/finish node: white ring, brand-purple centre. -->
-    <circle cx="54" cy="31" r="7" fill="#FFFFFF"/>
-    <circle cx="54" cy="31" r="3.4" fill="#7B1FA2"/>
-  </g>
+  <!-- Claimed ground. -->
+  <path d="M12.5 30 L17 15.5 L31 11.5 L38.5 24 L33 36.5 L21.5 37.5 Z"
+        fill="url(#mark)" fill-opacity="0.2" />
+  <!-- The walked loop, from the start round to the walker. -->
+  <path d="M12.5 30 L17 15.5 L31 11.5 L38.5 24 L33 36.5 L25.1 37.2"
+        fill="none" stroke="url(#mark)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" />
+  <!-- Start: solid. -->
+  <circle cx="12.5" cy="30" r="3.6" fill="url(#mark)" />
+  <!-- Walker: open. -->
+  <circle cx="21.5" cy="37.5" r="3.6" fill="none" stroke="url(#mark)" stroke-width="2.4" />
 </svg>
